@@ -1,0 +1,17 @@
+<div class = "feed">
+    <h2>Active Rooms</h2>
+    <hr><br>
+{% for room in rooms %}
+    <div class = "each-room">
+        {% if request.user == room.host %}
+            <a href = "{% url 'update-room' room.id %}">Edit</a>
+            <a href = "{% url 'delete-room' room.id %}">Delete</a>
+        {% endif %}
+        <a href = "{% url 'user-profile' room.host.id %}">@{{room.host.username}}</a>
+        <h5>{{room.id}} -- <a href="{% url 'room' room.id %} ">{{room.name}}</a></h5>
+        <p>{{room.description |  truncatechars:100 }}</p><br>
+        <small class = "topic-name">{{room.topic.name}}</small>
+    </div>
+    <br><br>
+{% endfor %} 
+</div>

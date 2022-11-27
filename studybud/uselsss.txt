@@ -1,0 +1,125 @@
+h1 {
+    margin:0;
+}
+
+.search-bar input[type=text] {
+    width: 500px;
+    padding: 6px 20px;
+    margin: 0 0;
+    box-sizing: border-box;
+    border: 1px solid #555;
+    outline: none;
+    position:relative;
+    left:250px;
+    top:-50px;
+    border-radius: 10px;
+  }
+
+input[type=text]:focus {
+    background-color: rgb(202, 202, 202);
+}
+
+div {
+    padding-right:3px;
+    padding-top:3px;
+}
+
+a:link {
+    color:white;
+    text-decoration: none;
+    padding:3px;
+}
+a:visited {
+    color:white;
+}
+a:hover {
+    color:#3c5f8d;
+}
+a:active {
+    color:grey;
+}
+
+.activity {
+    height: clamp(550px, 35%, 1280px) ;
+    width:fit-content;
+    overflow-y: scroll;
+    scrollbar-color: rebeccapurple green;
+    scrollbar-width: thin;
+    background-color: #2c2f33;
+    padding:10px;
+    border-radius: 15px;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    /*overflow: hidden;*/
+}
+
+.activity-components {
+    padding:3%;
+}
+
+.activity::-webkit-scrollbar {
+    display: none;
+  }
+
+
+.feed {
+    background-color: #2c2f33;
+    padding:10px;
+    border-radius: 15px;
+}
+
+.topics {
+    background-color: #2c2f33;
+    padding:10px;
+    border-radius: 15px;
+    width: clamp(400px, 20%, 700px)
+}
+
+.navbar {
+    background-color: #2c2f33;
+    margin: 0;
+    padding: 0;
+    height:80px;
+    position: relative;
+    top:-5px;
+    left:-5px;
+}
+.navbar h1 {
+    position:relative;
+    left:5rem;
+    top: 3px;
+}
+
+
+a.login, a.logout {
+    position:relative;
+    left:90%;
+    top:-96px;
+}
+
+p.welcome {
+    position:relative;
+    left:825px;
+    top: -78px;
+}
+.feed {
+    width:40rem;
+    position:relative;
+    left:55px;
+    top:15px;
+}
+
+.topics {
+    position:relative;
+    left:20px;
+    top:55px;
+    padding:10px;
+}
+
+/*#2c2f33*/
+
+    color: #3681ff;
+    background-color:white;
+    border-radius:10px;
+    border:none;
+    text-align: center;

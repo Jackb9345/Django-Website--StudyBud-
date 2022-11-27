@@ -1,0 +1,34 @@
+{% extends "main.html" %}
+
+{% block content %}
+
+
+<style>
+    .home-container{
+        display: grid;
+        grid-auto-columns: 1fr;
+        grid-auto-flow: column;
+        padding-top:30px;
+        gap: 3%;
+    }
+</style>
+
+<div class="home-container">
+    <div>
+        {% include "base/topics_component.html" %}
+    </div>
+    <div class="room-count">
+        <div class = "rooms-available">
+    <h5>{{room_count}} rooms available</h5>
+    <a href = "{% url 'create-room' %}" class="create-room-btn">Create Room </a>
+        </div>
+    
+        {% include "base/feed_component.html" %}   
+    </div>    
+
+    <div>
+        {% include "base/activity_component.html" %}
+    </div>
+</div>
+
+{% endblock content %}

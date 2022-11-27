@@ -1,0 +1,22 @@
+<div class = "navbar">
+<a href = "/" class="title">
+    <h1>StudyBud</h1>
+</a>
+<div class = "search-bar">
+    <form method = "GET" action="{% url 'home' %}">
+        <input type="text" name="q" placeholder="Search Rooms">
+    </form>
+</div>
+
+
+{% if request.user.is_authenticated  %}
+
+<p class = "welcome">Hello, {{request.user}}</p>
+
+<a href = "{% url 'logout' %}" class = "logout">Logout</a>
+{% else %}
+<a href = "{% url 'login' %}" class = "login">Login</a>
+
+{% endif %}
+
+</div>
