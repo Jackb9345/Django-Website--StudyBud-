@@ -2,4 +2,4 @@
  My first website using Django. A room/question based learning environment.
 
 
-![Home Page](img/home.png)
+![Home Page](\Django-Website--StudyBud-\imghome.png)
