@@ -1,0 +1,13 @@
+
+{% if top_rooms %}
+    <div>
+        <p>Trending:</p>
+        {% for room in top_rooms %}
+            <li>{{ room.name }}: {{ room.num_interactions }} interactions</li>
+        {% endfor %}
+    </ul>
+    </div>
+{% else %}
+<p> There are no rooms in display </p>
+{% endif %}
+

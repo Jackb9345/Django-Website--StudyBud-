@@ -26,6 +26,7 @@ body
 
 
 
+
 a:hover{
     color:#3681ff;
     transition-duration: 0.2s;
@@ -49,10 +50,42 @@ a:hover{
 }
 
 .room-count h5 {
-    padding:15px;
-    
+    padding:15px;    
 }
 
+.new_post_form {
+    margin:auto;
+    width:50%;
+    padding-top: 10rem;
+    border-style: none;
+    color:black;
+}
+.new_post_form input[name="submit-btn"] {
+    color: #ffffff;
+    background-color: #3681ff;
+    padding:5px;
+    width:5rem;
+    border-radius: 5px;
+}
+
+.new_post_form input[name="submit-btn"]:hover {
+    color: #23272a;
+    background-color: #ffffff;
+}
+
+.new_post_form input{
+    color: #23272a !important ; 
+    border-style: none;
+}
+
+.new_post_form label {
+    color:white;
+}
+
+.user-name {
+    position: absolute;
+    margin:0 auto;
+}
 
 .feed {
     min-width: min-content;
@@ -144,6 +177,7 @@ a {
 
 
 .navbar input[type=text] {
+    color:black;
     width:clamp(300px, 20%, 650px);
     padding: 5px 11px;
     border-radius: 8px;
@@ -152,13 +186,10 @@ a {
     top:1em;
     background-color: darkgray;
     outline:none;
-    
-    
 }
 
 
 .navbar input[type=text]:focus {
-    background-color: white;
     box-sizing: border-box;
     border: 1px solid #555;
     outline: none;
@@ -168,6 +199,47 @@ a {
 .navbar input[type=text]:hover {
     border: 1px solid white;
 }
+
+.comment-form input[type=text] {
+    color:black;
+}
+
+.comment-wrapper{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.comment-form {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.comment-form, .comment-wrapper {
+    margin: auto;
+    width: 50%;
+    background-color:#23272a;
+    padding:20px;
+}
+
+.participants-wrapper {
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    width:max-content;
+
+}
+
+input[name=body] {
+    border-radius: 5px;
+    padding:5px;
+}
+
+.message-wrapper {
+    padding: 20px;
+    background-color: #2c2f33;
+    border-radius: 10px;
+}
+
 
 .title {
     position: absolute;
@@ -231,7 +303,7 @@ a {
 
 .topic-name {
     width:fit-content;
-    background-color: #1f55b1;
+    background-color: #3681ff;
     padding:4px;
     border-radius: 7px;
     position:relative;

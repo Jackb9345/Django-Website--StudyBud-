@@ -8,6 +8,9 @@ from .forms import RoomForm
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.forms import UserCreationForm
+from django.core.paginator import Paginator # More efficient for larger implementations rather than slicing [:]
+from django.db.models import Count
+
 
 
 def loginPage(request):
@@ -66,10 +69,10 @@ def home(request):
 
     topics = Topic.objects.all()
     room_count = rooms.count()
-    room_messages = Message.objects.filter(Q(room__topic__name__icontains=q))
+    room_messages = Message.objects.filter(Q(room__topic__name__icontains=q))[:5]
 
     display_count = 0
-    
+
     context = {"rooms":rooms, "topics":topics, "room_count":room_count, "room_messages":room_messages}
     return render(request, "base/home.html", context)
 
@@ -86,6 +89,7 @@ def room(request, pk):
         )
         room.participants.add(request.user)
         return redirect ("room", pk=room.id)
+
 
     context = {"room": room, "room_messages": room_messages, "participants": participants}
     return render(request, "base/room.html", context) 
